@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import GlobalContext, { upperSide } from './GlobalContext'
+import GlobalContext from './GlobalContext'
 
 function Header() {
     const Tags = useContext(GlobalContext)

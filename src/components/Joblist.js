@@ -121,7 +121,7 @@ function Joblist() {
                     <div className='upper-side-list'>
                         {clickedItem.map((item) => (
                             <li key={item} >{item}
-                                <img src={remove} onClick={() => getText(item)} /></li>
+                                <img src={remove} onClick={() => getText(item)} alt="clicked-item" /></li>
 
 
 
@@ -136,7 +136,7 @@ function Joblist() {
                     filterResult.map((job) => (
                         <li key={job.id} className='wholecontainer' style={getStyle(job.featured)}>
 
-                            <img src={job.logo} />
+                            <img src={job.logo} alt="job-logo" />
                             <div className="right-side">
                                 <div className="top-side">
                                     <span style={{ color: 'hsl(180, 29%, 50%)' }}>{job.company}</span>
@@ -198,7 +198,7 @@ function Joblist() {
                     jobs.map((job) => (
                         <li key={job.id} className='wholecontainer' style={getStyle(job.featured)}>
 
-                            <img src={job.logo} />
+                            <img src={job.logo} alt="job-real-logo" />
                             <div className="right-side">
                                 <div className="top-side">
                                     <span style={{ color: 'hsl(180, 29%, 50%)' }}>{job.company}</span>
