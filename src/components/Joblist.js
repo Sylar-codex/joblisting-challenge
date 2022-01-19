@@ -164,29 +164,29 @@ function Joblist() {
                                             <li onClick={() => {
                                                 setFiltering(true);
                                                 filterByRole(job.role);
-                                                clickedItem.indexOf(job.role) === -1 ?
-                                                    setClickedItem([...clickedItem, job.role]) : '';
+                                                clickedItem.indexOf(job.role) === -1 &&
+                                                    setClickedItem([...clickedItem, job.role]);
 
                                             }}>{job.role}</li>
                                             {/* Level */}
                                             <li onClick={() => {
                                                 filterByLevel(job.level);
                                                 setFiltering(true);
-                                                clickedItem.indexOf(job.level) === -1 ?
-                                                    setClickedItem([...clickedItem, job.level]) : "";
+                                                clickedItem.indexOf(job.level) === -1 &&
+                                                    setClickedItem([...clickedItem, job.level]);
                                             }}>{job.level}</li>
                                             {/* Languages */}
                                             {job.languages.map((lang) => (
                                                 <li key={lang} onClick={() => {
                                                     filterByLang(lang);
                                                     setFiltering(true);
-                                                    clickedItem.indexOf(lang) === -1 ?
-                                                        setClickedItem([...clickedItem, lang]) : '';
+                                                    clickedItem.indexOf(lang) === -1 &&
+                                                        setClickedItem([...clickedItem, lang]);
                                                 }}> {lang}</li>
                                             ))}
                                             {/* Tools */}
                                             {job.tools.map((tool) => (
-                                                <li key={tool} onClick={() => { filterByTool(tool); setFiltering(true); clickedItem.indexOf(tool) === -1 ? setClickedItem([...clickedItem, tool]) : ''; }}> {tool}</li>
+                                                <li key={tool} onClick={() => { filterByTool(tool); setFiltering(true); clickedItem.indexOf(tool) === -1 && setClickedItem([...clickedItem, tool]); }}> {tool}</li>
                                             ))}
                                         </ul>
                                     </div>
