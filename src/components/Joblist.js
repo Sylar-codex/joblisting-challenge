@@ -8,9 +8,8 @@ function Joblist() {
     const [filterResult, setFilterResult] = useState([]);
     const [clickedItem, setClickedItem] = useState([]);
 
-    //const GlobalJob = React.createContext()
 
-
+    //Function that is used to filter the jobs by role
 
     const filterByRole = (role) => {
         if (filtering) {
@@ -31,6 +30,7 @@ function Joblist() {
 
     }
 
+    //function to filter the jobs by level
     const filterByLevel = (level) => {
 
         if (filtering) {
@@ -50,6 +50,7 @@ function Joblist() {
 
 
     }
+    //function to filter the jobs by language
 
     const filterByLang = (lang) => {
         if (filtering) {
@@ -66,6 +67,8 @@ function Joblist() {
             setFilterResult(result);
         }
     }
+
+    //function to filter the jobs by the tools
     const filterByTool = (tool) => {
         if (filtering) {
             const result = filterResult.filter(((job) => {
@@ -82,6 +85,7 @@ function Joblist() {
         }
     }
 
+    //component styling for the filtered lists
     const upperSideStyle = () => {
         return {
             borderRadius: filtering ? '10px' : 'none',
@@ -211,7 +215,7 @@ function Joblist() {
                                 <div className='Middle-side'>
                                     <div>
                                         <h3>{job.position}</h3>
-                                        <ul style={{ display: 'flex', gap: '20px' }}>
+                                        <ul style={{ display: 'flex' }}>
                                             <li style={{ listStyle: 'none' }}>{job.timePost}</li>
                                             <li>{job.description}</li>
                                             <li>{job.location}</li>
