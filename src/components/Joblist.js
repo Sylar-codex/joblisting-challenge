@@ -215,12 +215,13 @@ function Joblist() {
                                 <div className='Middle-side'>
                                     <div>
                                         <h3>{job.position}</h3>
-                                        <ul style={{ display: 'flex' }}>
-                                            <li style={{ listStyle: 'none' }}>{job.timePost}</li>
-                                            <li>{job.description}</li>
-                                            <li>{job.location}</li>
-                                        </ul>
-
+                                        <div className='job-desc'>
+                                            <ul style={{ display: 'flex' }}>
+                                                <li style={{ listStyle: 'none' }}>{job.timePost}</li>
+                                                <li>{job.description}</li>
+                                                <li>{job.location}</li>
+                                            </ul>
+                                        </div>
                                     </div>
 
                                     <div className="bottom-side">

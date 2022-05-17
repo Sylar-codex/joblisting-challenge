@@ -144,7 +144,7 @@ body {
   margin-top: 15px;
 }
 
-.Middle-side ul li {
+.job-desc ul li {
   margin-right: 20px;
 }
 
@@ -179,8 +179,8 @@ body {
     flex-direction: column;
     border-radius: 5px;
     height: auto;
-    width: 78%;
-    margin-left: 25px;
+    width: 84%;
+    margin-left: 12px;
     margin-top: 70px;
   }
 
@@ -198,15 +198,17 @@ body {
 
   .bottom-side ul {
     width: 100%;
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     border-top: 1px solid;
     margin-top: 20px;
     padding-top: 30px;
   }
 
   .bottom-side ul li {
-    display: inline-block;
-    width: 70px;
+    font-size: 14px;
+    width: 65px;
+    padding: 10px;
     text-align: center;
   }
 
